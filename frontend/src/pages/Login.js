@@ -35,56 +35,62 @@ const Login = () => {
 
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      height="100vh"
-      bgcolor="#f5f5f5"
-    >
-      <Typography variant="h4" gutterBottom>
-        Login
+  display="flex"
+  flexDirection="column"
+  alignItems="center"
+  justifyContent="center"
+  height="100vh"
+  bgcolor="background.default"
+  px={2} // Add padding for smaller screens
+>
+  <Typography variant="h4" gutterBottom color="primary">
+    Login
+  </Typography>
+  <Box component="form" width={{ xs: "100%", sm: "300px" }}>
+    <TextField
+      fullWidth
+      label="Email or Username"
+      variant="outlined"
+      margin="normal"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+    />
+    <TextField
+      fullWidth
+      label="Password"
+      type="password"
+      variant="outlined"
+      margin="normal"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+    />
+    {error && (
+      <Typography color="error" variant="body2" sx={{ mt: 1 }}>
+        {error}
       </Typography>
-      <Box component="form" width="300px">
-        <TextField
-          fullWidth
-          label="Email or Username"
-          variant="outlined"
-          margin="normal"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          fullWidth
-          label="Password"
-          type="password"
-          variant="outlined"
-          margin="normal"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {error && (
-          <Typography color="error" variant="body2" sx={{ mt: 1 }}>
-            {error}
-          </Typography>
-        )}
-        <Button
-          fullWidth
-          variant="contained"
-          color="primary"
-          sx={{ mt: 2 }}
-          onClick={handleLogin}
-        >
-          Login
-        </Button>
-        <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-          <Link to="/forgot-password">Forgot Password?</Link>
-        </Typography>
-        <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-          Don't have an account? <Link to="/signup">Signup</Link>
-        </Typography>
-      </Box>
-    </Box>
+    )}
+    <Button
+      fullWidth
+      variant="contained"
+      color="primary"
+      sx={{ mt: 2 }}
+      onClick={handleLogin}
+    >
+      Login
+    </Button>
+    <Typography variant="body2" align="center" sx={{ mt: 2 }}>
+      <Link to="/forgot-password" style={{ textDecoration: "none", color: "#1976d2" }}>
+        Forgot Password?
+      </Link>
+    </Typography>
+    <Typography variant="body2" align="center" sx={{ mt: 2 }}>
+      Don't have an account?{" "}
+      <Link to="/signup" style={{ textDecoration: "none", color: "#1976d2" }}>
+        Signup
+      </Link>
+    </Typography>
+  </Box>
+</Box>
   );
 };
 

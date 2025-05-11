@@ -2,11 +2,10 @@ import React from "react";
 import { Box, Grid, Card, CardMedia, Typography } from "@mui/material";
 
 const ImageGallery = () => {
-  // Placeholder images
   const images = [
-    { id: 1, src: "https://via.placeholder.com/150", title: "Image 1" },
-    { id: 2, src: "https://via.placeholder.com/150", title: "Image 2" },
-    { id: 3, src: "https://via.placeholder.com/150", title: "Image 3" },
+    { id: 1, src: "https://dummyimage.com/150", title: "Image 1" },
+    { id: 2, src: "https://dummyimage.com/150", title: "Image 2" },
+    { id: 3, src: "https://dummyimage.com/150", title: "Image 3" },
   ];
 
   return (
@@ -16,7 +15,8 @@ const ImageGallery = () => {
       </Typography>
       <Grid container spacing={2}>
         {images.map((image) => (
-          <Grid item xs={12} sm={6} md={4} key={image.id}>
+          <Grid key={image.id} xs={12} sm={6} md={4}>
+            {/* Removed the `item` prop */}
             <Card>
               <CardMedia
                 component="img"

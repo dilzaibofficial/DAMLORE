@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route
-          path="/admin-dashboard"
+          path="/admin-dashboard/*" // Add wildcard to handle nested routes
           element={
             <PrivateRoute allowedRoles={["admin"]}>
               <AdminDashboard />
@@ -23,7 +23,7 @@ const App = () => {
           }
         />
         <Route
-          path="/user-dashboard"
+          path="/user-dashboard/*" // Add wildcard to handle nested routes
           element={
             <PrivateRoute allowedRoles={["user"]}>
               <UserDashboard />
