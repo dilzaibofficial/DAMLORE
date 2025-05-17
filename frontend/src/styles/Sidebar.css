@@ -1,29 +1,124 @@
-.sidebar {
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
-    height: 100vh;
-    position: fixed;
-  }
-  
-  .sidebar h6 {
-    padding: 16px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .sidebar .MuiListItem-root {
-    padding: 10px 16px;
-  }
-  
-  .sidebar .MuiButton-root {
-    margin-top: 16px;
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-  }
+/* Sidebar Container */
+.custom-sidebar {
+  width: 280px;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow-y: auto; /* Enable scrolling for the entire sidebar */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  background-color: #e0ebff;
+  color: #373a4b;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+.sidebar-nav .nav-item.active,
+.sidebar-nav .nav-item:hover {
+  background-color: #e6f0ff;
+  font-weight: 500;
+}
+
+/* Filters */
+.sidebar-filters {
+  margin-top: 24px;
+}
+
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.filter-content {
+  padding-left: 8px;
+  margin-bottom: 8px;
+}
+
+/* Footer Buttons */
+.sidebar-footer {
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+save-btn {
+  margin-bottom: 8px;
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border: 1px solid #ddd; /* Light border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Buttons - Default Style */
+button {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border: 1px solid #ddd; /* Light border */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Buttons - Hover Style */
+button:hover {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}
+
+
+logout-btn{
+  margin-top: 10px;
+  align-items: center;
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border: 1px solid #ddd; /* Light border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+logout-btn:hover {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}

@@ -1,0 +1,107 @@
+/* Notes Panel Container */
+.notes-container {
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notes-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.notes-count {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Input Section */
+.notes-input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.notes-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.add-note-btn {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-note-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Note Card */
+.note-card {
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-text {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Delete Button */
+.delete-note-btn {
+  padding: 5px 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background 0.2s ease;
+}
+
+.delete-note-btn:hover {
+  background: #cc0000;
+}

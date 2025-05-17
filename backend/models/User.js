@@ -20,6 +20,14 @@ const userSchema = new mongoose.Schema({
     enum: ["admin", "user"],
     default: "user",
   },
+  resetCode: {
+    type: String,
+    default: null,
+  },
+  resetCodeExpires: {
+    type: Date,
+    default: null,
+  },
 });
 
 // Hash password before saving

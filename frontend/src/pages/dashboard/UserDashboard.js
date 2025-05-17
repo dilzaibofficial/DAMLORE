@@ -16,7 +16,7 @@ const UserDashboard = () => {
     <Box display="flex">
       <Sidebar role="user" /> {/* Sidebar for User */}
       <Box flex={1} p={3}>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        {/* <Box display="flex" justifyContent="space-between" alignItems="center">
           <h1>User Dashboard</h1>
           <Button
             variant="contained"
@@ -25,7 +25,7 @@ const UserDashboard = () => {
           >
             Logout
           </Button>
-        </Box>
+        </Box> */}
         <Routes>
           {/* Default route redirects to "image-gallery" */}
           <Route path="/" element={<Navigate to="image-gallery" replace />} />

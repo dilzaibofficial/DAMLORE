@@ -20,7 +20,7 @@ const AdminDashboard = () => {
     <Box display="flex">
       <Sidebar role="admin" /> {/* Sidebar for Admin */}
       <Box flex={1} p={3}>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        {/* <Box display="flex" justifyContent="space-between" alignItems="center">
           <h1>Admin Dashboard</h1>
           <Button
             variant="contained"
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
           >
             Logout
           </Button>
-        </Box>
+        </Box> */}
         <Routes>
           {/* Default route redirects to "upload-images" */}
           <Route path="/" element={<Navigate to="upload-images" replace />} />

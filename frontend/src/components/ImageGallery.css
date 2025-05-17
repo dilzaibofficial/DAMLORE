@@ -1,0 +1,146 @@
+/* Container */
+.image-gallery-container {
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.status-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.raw {
+  color: #ff4d4d;
+}
+
+.status.in-progress {
+  color: #ffa500;
+}
+
+.status.approved {
+  color: #4caf50;
+}
+
+.status.delivered {
+  color: #6495ed;
+}
+
+.total {
+  margin-left: auto;
+  color: #666;
+}
+
+/* Search and Filter Section */
+.search-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+}
+
+.btn:hover {
+  /* background: #007bff; */
+  color: white;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+.tab-btn.active {
+  /* border-bottom: 2px solid #007bff; */
+  color: #333;
+  font-weight: bold;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.code {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+}
